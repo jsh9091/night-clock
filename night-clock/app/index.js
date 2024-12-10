@@ -28,7 +28,7 @@ import { me as appbit } from "appbit";
 import { today as activity } from "user-activity";
 import { goals } from "user-activity";
 import { battery } from "power";
-import { preferences } from "user-settings";
+import { preferences, units } from "user-settings";
 import { FitFont } from "./fitfont"
 
 // Update the clock every minute
@@ -43,8 +43,8 @@ const thuLabel = document.getElementById("thuLabel");
 const friLabel = document.getElementById("friLabel");
 const satLabel = document.getElementById("satLabel");
 const stepCountLabel = document.getElementById("stepCountLabel");
-const tempLabel = document.getElementById("tempLabel");
-const floorsLabel = document.getElementById("floorsLabel");
+const calorieLabel = document.getElementById("calorieLabel");
+const distanceLabel = document.getElementById("distanceLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 // get Fitfont labels
@@ -193,18 +193,13 @@ function updateDayField(evt) {
 function updateExerciseFields() {
   if (appbit.permissions.granted("access_activity")) {
     stepCountLabel.text = getSteps().formatted;
-    floorsLabel.text = activity.adjusted.elevationGain;
-    // TODO remove
-    console.log(`${goals.activeZoneMinutes.total} activeZoneMinutes Goal`);
-    console.log(`${activity.local.activeZoneMinutes.fatBurn}`);
-    console.log(`${activity.local.activeZoneMinutes.cardio}`);
-    console.log(`${activity.local.activeZoneMinutes.peak}`);
-    console.log(`${activity.adjusted.activeZoneMinutes.total}`);
-    console.log("calories: " + `${activity.adjusted.calories}`);
-    console.log("distance: " + `${activity.adjusted.distance}`);
+    calorieLabel.text = getCalories().formatted;
+    distanceLabel.text = getDistance();
+
   } else {
     stepCountLabel.text = "----";
     floorsLabel.text = "----";
+    calorieLabel.text = "----";
   }
 }
 
@@ -221,6 +216,42 @@ function getSteps() {
         ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
         : val,
   };
+}
+
+/**
+ * Gets and formats user calories burned for the day.
+ * @returns
+ */
+function getCalories() {
+  let val = activity.adjusted.calories || 0;
+  return {
+    raw: val,
+    formatted:
+      val > 999
+        ? `${Math.floor(val / 1000)},${("00" + (val % 1000)).slice(-3)}`
+        : val,
+  };
+}
+
+/**
+ * Calculates distance values for display based on user settings.
+ * @returns 
+ */
+function getDistance() {
+  let val = activity.adjusted.distance || 0;
+  let suffix;
+
+  if (units.distance === "metric") {
+    let km = val / 1000;
+    val = km.toFixed(1);
+    suffix = " km"
+  } else {
+    let mi = val * 0.000621371192;
+    val = mi.toFixed(1);
+    suffix = " mi"
+  }
+  
+  return val + suffix;
 }
 
 /**

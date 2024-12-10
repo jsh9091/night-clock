@@ -70,11 +70,10 @@
     <text id="stepCountLabel" />
     <image id="stepsIcon" href="steps.png" />
   
-    <text id="floorsLabel" />
-    <image id="floorsIcon" href="floors.png" />
+    <text id="distanceLabel" />
   
-    <text id="tempLabel" />
-    <image id="tempIcon" href="flame.png" />
+    <text id="calorieLabel" />
+    <image id="calorieIcon" href="flame.png" />
   
     <text id="batteryLabel" />
     <image id="batteryIcon" href="battery-full.png" />

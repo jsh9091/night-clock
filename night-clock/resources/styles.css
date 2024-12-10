@@ -1,4 +1,4 @@
-/*
+ /*
  * MIT License
  * 
  * Copyright (c) 2024 Joshua Horvath
@@ -23,7 +23,7 @@
  */
 
  text {
-  font-size: 34;
+  font-size: 32;
   font-family: System-Regular;
   font-weight: regular;
   fill: red;
@@ -113,49 +113,42 @@
 #stepCountLabel {
   text-length: 80;
   text-anchor: start;
-  x: 21%;
+  x: 17%;
   y: 80%;
 }
 
 #stepsIcon {
-  x: 6%;
+  x: 5%;
   y: 73%;
-  width: "35";
+  width: "27";
   height: "23" 
 }
 
-#floorsLabel {
+#distanceLabel {
   text-length: 80;
   text-anchor: start;
-  x: 21%;
+  x: 6%;
   y: 93%;
 }
 
-#floorsIcon {
-  x: 6%;
-  y: 86%;
-  width: "35";
-  height: "21" 
-}
-
-#tempLabel {
+#calorieLabel {
   text-length: 128;
   text-anchor: end;
   x: 87%;
   y: 80%;
 }
 
-#tempIcon {
-  x: 89%;
+#calorieIcon {
+  x: 90%;
   y: 72%;
   width: "16";
-  height: "29" 
+  height: "26" 
 }
 
 #batteryLabel {
   text-length: 128;
   text-anchor: end;
-  x: 79%;
+  x: 78%;
   y: 93%;
 }
 
