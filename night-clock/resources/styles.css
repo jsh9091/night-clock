@@ -1,0 +1,167 @@
+/*
+ * MIT License
+ * 
+ * Copyright (c) 2024 Joshua Horvath
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+ text {
+  font-size: 34;
+  font-family: System-Regular;
+  font-weight: regular;
+  fill: red;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  fill:black;
+}
+
+#sunLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 10%;
+  y: 15%;
+}
+
+#monLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 22%;
+  y: 15%;
+}
+#tueLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 34%;
+  y: 15%;
+}
+#wedLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 45%;
+  y: 15%;
+}
+#thuLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 56%;
+  y: 15%;
+}
+#friLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 67%;
+  y: 15%;
+}
+#satLabel {
+  font-size: 25;
+  text-length: 80;
+  text-anchor: start;
+  x: 77%;
+  y: 15%;
+}
+
+#amLabel {
+  fill: red;
+  x: 97%;
+  y: 31%;
+}
+
+#pmLabel {
+  fill: red;
+  x: 97%;
+  y: 45%;
+}
+
+#timeLabel {
+  fill: red;
+  x: 48%;
+  y: 45%;
+}
+
+#dateLabel {
+  fill: red;
+  x: 48%;
+  y: 62%;
+}
+
+#stepCountLabel {
+  text-length: 80;
+  text-anchor: start;
+  x: 21%;
+  y: 80%;
+}
+
+#stepsIcon {
+  x: 6%;
+  y: 73%;
+  width: "35";
+  height: "23" 
+}
+
+#floorsLabel {
+  text-length: 80;
+  text-anchor: start;
+  x: 21%;
+  y: 93%;
+}
+
+#floorsIcon {
+  x: 6%;
+  y: 86%;
+  width: "35";
+  height: "21" 
+}
+
+#tempLabel {
+  text-length: 128;
+  text-anchor: end;
+  x: 87%;
+  y: 80%;
+}
+
+#tempIcon {
+  x: 89%;
+  y: 72%;
+  width: "16";
+  height: "29" 
+}
+
+#batteryLabel {
+  text-length: 128;
+  text-anchor: end;
+  x: 79%;
+  y: 93%;
+}
+
+#batteryIcon {
+  x: 81%;
+  y: 85%;
+  width: "40";
+  height: "24" 
+}
