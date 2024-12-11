@@ -127,8 +127,15 @@
 #distanceLabel {
   text-length: 80;
   text-anchor: start;
-  x: 6%;
+  x: 12%;
   y: 93%;
+}
+
+#distanceIcon {
+  x: 5%;
+  y: 86%;
+  width: "13";
+  height: "23" 
 }
 
 #calorieLabel {
@@ -148,13 +155,13 @@
 #batteryLabel {
   text-length: 128;
   text-anchor: end;
-  x: 78%;
+  x: 82%;
   y: 93%;
 }
 
 #batteryIcon {
-  x: 81%;
+  x: 84%;
   y: 85%;
-  width: "40";
+  width: "35";
   height: "24" 
 }
