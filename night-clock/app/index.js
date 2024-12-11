@@ -26,7 +26,6 @@ import document from "document";
 import clock from "clock";
 import { me as appbit } from "appbit";
 import { today as activity } from "user-activity";
-import { goals } from "user-activity";
 import { battery } from "power";
 import { preferences, units } from "user-settings";
 import { FitFont } from "./fitfont"
@@ -48,10 +47,10 @@ const distanceLabel = document.getElementById("distanceLabel");
 const batteryLabel = document.getElementById("batteryLabel");
 const batteryIcon = document.getElementById("batteryIcon");
 // get Fitfont labels
-const timeLabel = new FitFont({id:'timeLabel', font:'Pocket_Calculator_110', halign: 'middle'})
-const dateLabel = new FitFont({id:'dateLabel', font:'Pocket_Calculator_55', halign: 'middle'})
-const amLabel = new FitFont({id:'amLabel', font:'Pocket_Calculator_35', halign: 'end'})
-const pmLabel = new FitFont({id:'pmLabel', font:'Pocket_Calculator_35', halign: 'end'})
+const timeLabel = new FitFont({id:'timeLabel', font:'Pocket_Calculator_105', halign: 'middle'})
+const dateLabel = new FitFont({id:'dateLabel', font:'Pocket_Calculator_50', halign: 'middle'})
+const amLabel = new FitFont({id:'amLabel', font:'Pocket_Calculator_32', halign: 'end'})
+const pmLabel = new FitFont({id:'pmLabel', font:'Pocket_Calculator_32', halign: 'end'})
 
 /**
  * Update the display of clock values.
